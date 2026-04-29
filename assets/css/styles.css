@@ -226,7 +226,7 @@ nav.scrolled .nav-links a:hover { color: var(--gold); }
 
 /* Mobile menu */
 .mobile-menu {
-  display: none; position: fixed; inset: 0; z-index: 99;
+  display: none; position: fixed; inset: 0; z-index: 201;
   background: rgba(4,17,30,0.98); backdrop-filter: blur(20px);
   flex-direction: column; align-items: center; justify-content: center; gap: 36px;
 }
