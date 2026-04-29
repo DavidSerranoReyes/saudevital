@@ -59,6 +59,30 @@ body {
 .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.7s, transform 0.7s; }
 .reveal.visible { opacity: 1; transform: translateY(0); }
 
+section { position: relative; }
+
+/* ── Section wave dividers ───────────────────────────────
+   Standalone SVG elements placed between sections.
+   Each divider background = previous section color;
+   SVG path fill = next section color.
+   No z-index conflicts, no content overlap. */
+.wave-divider {
+  display: block;
+  width: 100%;
+  height: 80px;
+  overflow: hidden;
+  line-height: 0;
+  flex-shrink: 0;
+}
+.wave-divider svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 768px) { .wave-divider { height: 52px; } }
+@media (max-width: 480px) { .wave-divider { height: 36px; } }
+
 /* ── Buttons ── */
 .btn-primary {
   padding: 14px 32px;
@@ -424,8 +448,6 @@ nav.scrolled .nav-links a:hover { color: var(--gold); }
 #strip {
   padding: 0;
   background: var(--navy2);
-  border-top: 1px solid rgba(201,168,76,0.15);
-  border-bottom: 1px solid rgba(201,168,76,0.15);
   overflow: hidden;
 }
 .strip-track {
@@ -446,7 +468,7 @@ nav.scrolled .nav-links a:hover { color: var(--gold); }
 #servicios {
   background: var(--light);
 }
-#servicios .inner { max-width: 1200px; margin: 0 auto; }
+#servicios .inner { max-width: 1200px; margin: 0 auto; position: relative; z-index: 1; }
 
 .services-header {
   display: flex; justify-content: space-between; align-items: flex-end;
@@ -548,6 +570,7 @@ nav.scrolled .nav-links a:hover { color: var(--gold); }
   display: grid; grid-template-columns: 1fr 1fr;
   gap: 80px; align-items: center;
   max-width: 1200px; margin: 0 auto;
+  position: relative; z-index: 1;
 }
 
 .about-visual { position: relative; }
@@ -611,6 +634,7 @@ nav.scrolled .nav-links a:hover { color: var(--gold); }
 .why-wrap {
   max-width: 1200px; margin: 0 auto;
   display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start;
+  position: relative; z-index: 1;
 }
 
 .why-left-image {
@@ -669,6 +693,7 @@ nav.scrolled .nav-links a:hover { color: var(--gold); }
 
 .pricing-wrap {
   max-width: 900px; margin: 48px auto 0;
+  position: relative; z-index: 1;
   display: grid; grid-template-columns: 1fr 1.2fr;
   border: 1px solid rgba(201,168,76,0.15);
   border-radius: var(--r-xl); overflow: hidden;
@@ -719,6 +744,7 @@ nav.scrolled .nav-links a:hover { color: var(--gold); }
 .contact-wrap {
   max-width: 1200px; margin: 0 auto;
   display: grid; grid-template-columns: 1fr 1fr; gap: 80px;
+  position: relative; z-index: 1;
 }
 
 .contact-info { display: flex; flex-direction: column; gap: 14px; margin-top: 40px; }
@@ -783,7 +809,6 @@ nav.scrolled .nav-links a:hover { color: var(--gold); }
    ============================================= */
 footer {
   background: var(--navy);
-  border-top: 1px solid rgba(201,168,76,0.12);
   padding: 56px 5% 32px;
 }
 
