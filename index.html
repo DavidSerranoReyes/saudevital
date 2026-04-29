@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SAUDEVITAL – Salud y Bienestar | Dr. Gabriel Ramírez</title>
+  <meta name="description" content="Consultorio médico en Quito. Medicina General, Ozonoterapia, Bienestar Masculino, VPH. 1era consulta $25. Av. Gaspar de Villarroel y París." />
+
+  <!-- Favicon usando el logo real -->
+  <link rel="icon" type="image/jpeg" href="assets/img/logo.jpg" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+
+  <!-- ── Floating WhatsApp ── -->
+  <a href="https://wa.me/593980597474" class="float-wa" target="_blank" rel="noopener" title="Escríbenos por WhatsApp">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+  </a>
+
+  <!-- ── Mobile menu ── -->
+  <div class="mobile-menu" id="mobileMenu">
+    <button class="mobile-close" id="mobileClose">✕</button>
+    <a href="#servicios">Servicios</a>
+    <a href="#nosotros">Nosotros</a>
+    <a href="#por-que">¿Por qué elegirnos?</a>
+    <a href="#consulta">1era Consulta</a>
+    <a href="#contacto">Contacto</a>
+  </div>
+
+  <!-- ═══════════════════════════════════════════
+       NAVIGATION
+  ════════════════════════════════════════════ -->
+  <nav id="navbar">
+    <a href="#" class="nav-logo">
+      <img src="assets/img/logo.jpg" alt="SAUDEVITAL logo" />
+      <div class="nav-logo-text">
+        <span class="logo-name">SAUDEVITAL</span>
+        <span class="logo-sub">Salud y Bienestar</span>
+      </div>
+    </a>
+
+    <ul class="nav-links">
+      <li><a href="#servicios">Servicios</a></li>
+      <li><a href="#nosotros">Nosotros</a></li>
+      <li><a href="#por-que">¿Por qué elegirnos?</a></li>
+      <li><a href="#consulta">1era Consulta</a></li>
+      <li><a href="#contacto" class="nav-cta">Agendar cita</a></li>
+    </ul>
+
+    <div class="nav-burger" id="navBurger">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+  <!-- ═══════════════════════════════════════════
+       HERO
+  ════════════════════════════════════════════ -->
+  <section id="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-grid"></div>
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+
+    <!-- Animated logo display -->
+    <div class="hero-logo-display" id="heroLogo">
+      <!-- Glow aura -->
+      <div class="logo-aura"></div>
+
+      <!-- Rotating rings -->
+      <div class="logo-ring logo-ring-1"></div>
+      <div class="logo-ring logo-ring-2"></div>
+      <div class="logo-ring logo-ring-3"></div>
+
+      <!-- Orbiting particles -->
+      <div class="logo-orbit logo-orbit-1"><span class="logo-particle gold"></span></div>
+      <div class="logo-orbit logo-orbit-2"><span class="logo-particle teal"></span></div>
+      <div class="logo-orbit logo-orbit-3"><span class="logo-particle gold small"></span></div>
+      <div class="logo-orbit logo-orbit-4"><span class="logo-particle teal small"></span></div>
+      <div class="logo-orbit logo-orbit-5"><span class="logo-particle gold"></span></div>
+      <div class="logo-orbit logo-orbit-6"><span class="logo-particle teal small"></span></div>
+
+      <!-- Logo image -->
+      <div class="logo-core">
+        <img src="assets/img/logo.jpg" alt="SAUDEVITAL" />
+      </div>
+    </div>
+
+    <div class="hero-content">
+      <div class="hero-eyebrow">
+        <div class="hero-eyebrow-line"></div>
+        <span>Dr. Gabriel Ramírez · Quito, Ecuador</span>
+      </div>
+
+      <h1 class="hero-h1">
+        Tu salud en<br />
+        <em>manos<br />profesionales</em>
+      </h1>
+
+      <p class="hero-desc">
+        Medicina integral con enfoque humano y personalizado. Atención preventiva,
+        curativa y de rehabilitación para tu bienestar completo.
+      </p>
+
+      <div class="hero-actions">
+        <a href="https://wa.me/593980597474?text=Hola%2C%20quiero%20agendar%20una%20consulta" class="btn-primary" target="_blank" rel="noopener">
+          Agendar consulta
+        </a>
+        <a href="#servicios" class="btn-secondary">
+          Ver servicios
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="hero-scroll">
+      <div class="hero-scroll-line"></div>
+      <span>Explorar</span>
+    </div>
+  </section>
+
+  <!-- ── Marquee strip ── -->
+  <div id="strip">
+    <div class="strip-track">
+      <div class="strip-item"><span class="strip-dot"></span>Medicina General</div>
+      <div class="strip-item"><span class="strip-dot"></span>Ozonoterapia</div>
+      <div class="strip-item"><span class="strip-dot"></span>Bienestar Masculino</div>
+      <div class="strip-item"><span class="strip-dot"></span>VPH · Diagnóstico y Tratamiento</div>
+      <div class="strip-item"><span class="strip-dot"></span>Salud Preventiva</div>
+      <div class="strip-item"><span class="strip-dot"></span>Enfermedades Crónico-Metabólicas</div>
+      <div class="strip-item"><span class="strip-dot"></span>Ozonoterapia Aplicada</div>
+      <!-- duplicate for seamless loop -->
+      <div class="strip-item"><span class="strip-dot"></span>Medicina General</div>
+      <div class="strip-item"><span class="strip-dot"></span>Ozonoterapia</div>
+      <div class="strip-item"><span class="strip-dot"></span>Bienestar Masculino</div>
+      <div class="strip-item"><span class="strip-dot"></span>VPH · Diagnóstico y Tratamiento</div>
+      <div class="strip-item"><span class="strip-dot"></span>Salud Preventiva</div>
+      <div class="strip-item"><span class="strip-dot"></span>Enfermedades Crónico-Metabólicas</div>
+      <div class="strip-item"><span class="strip-dot"></span>Ozonoterapia Aplicada</div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════
+       SERVICES
+  ════════════════════════════════════════════ -->
+  <section id="servicios">
+    <div class="inner">
+      <div class="services-header reveal">
+        <div>
+          <div class="section-label">
+            <div class="section-label-line"></div>
+            <span>Lo que ofrecemos</span>
+          </div>
+          <h2 class="section-title">Servicios <em>especializados</em><br />para tu bienestar</h2>
+        </div>
+        <p class="section-subtitle section-light" style="max-width:380px;">
+          Atención médica integral con enfoque humano y personalizado,
+          adaptado a cada etapa de tu vida.
+        </p>
+      </div>
+
+      <div class="services-grid">
+
+        <!-- Medicina General (featured) -->
+        <div class="service-card featured reveal">
+          <div class="featured-inner">
+            <div>
+              <img
+                class="service-img"
+                src="https://images.unsplash.com/photo-1666214280557-f1b5022eb634?w=600&auto=format&fit=crop&q=80"
+                alt="Consulta de medicina general"
+                loading="lazy"
+              />
+              <div class="service-icon">🩺</div>
+              <h3 class="service-title">Medicina General</h3>
+              <p class="service-desc">
+                Atención médica integral que combina prevención, diagnóstico y tratamiento.
+                Tu salud, nuestra prioridad.
+              </p>
+            </div>
+            <div style="display:flex;flex-direction:column;justify-content:center;">
+              <ul class="service-list">
+                <li>Medicina preventiva, curativa y de rehabilitación</li>
+                <li>Control y seguimiento de patologías crónico-metabólicas</li>
+                <li>Diagnóstico integral y personalizado</li>
+                <li>Tratamientos complementarios: próstata, artrosis, hígado graso</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Ozonoterapia -->
+        <div class="service-card teal-accent reveal">
+          <img
+            class="service-img"
+            src="https://images.unsplash.com/photo-1584820927498-cfe5211fd8bf?w=600&auto=format&fit=crop&q=80"
+            alt="Ozonoterapia médica"
+            loading="lazy"
+          />
+          <div class="service-icon">💧</div>
+          <h3 class="service-title">Ozonoterapia</h3>
+          <p class="service-desc">
+            Tratamiento médico con ozono aplicado a diversas patologías,
+            según valoración personalizada previa.
+          </p>
+          <ul class="service-list">
+            <li>Aplicación según valoración médica</li>
+            <li>Indicado para diversas patologías</li>
+            <li>Enfoque complementario e integral</li>
+          </ul>
+        </div>
+
+        <!-- Bienestar Masculino -->
+        <div class="service-card reveal">
+          <img
+            class="service-img"
+            src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?w=600&auto=format&fit=crop&q=80"
+            alt="Consulta de salud masculina"
+            loading="lazy"
+          />
+          <div class="service-icon">♂️</div>
+          <h3 class="service-title">Bienestar Masculino</h3>
+          <p class="service-desc">
+            Abordaje integral de la salud masculina con confidencialidad
+            y profesionalismo en cada etapa.
+          </p>
+          <ul class="service-list">
+            <li>Disfunción sexual y eyaculación precoz</li>
+            <li>Patologías genitales masculinas</li>
+            <li>Tratamiento personalizado y discreto</li>
+          </ul>
+        </div>
+
+        <!-- VPH -->
+        <div class="service-card teal-accent reveal">
+          <img
+            class="service-img"
+            src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=600&auto=format&fit=crop&q=80"
+            alt="Diagnóstico y tratamiento VPH"
+            loading="lazy"
+          />
+          <div class="service-icon">🔬</div>
+          <h3 class="service-title">VPH · Diagnóstico y Tratamiento</h3>
+          <p class="service-desc">
+            Diagnóstico personalizado del Virus del Papiloma Humano con
+            opciones de tratamiento especializadas.
+          </p>
+          <ul class="service-list">
+            <li>Diagnóstico personalizado y confidencial</li>
+            <li>Opciones de tratamiento médico actualizadas</li>
+            <li>Electrocauterización de verrugas genitales</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       ABOUT
+  ════════════════════════════════════════════ -->
+  <section id="nosotros">
+    <div class="about-grid">
+
+      <!-- Visual -->
+      <div class="about-visual reveal">
+        <div class="about-card-main">
+          <img
+            src="assets/img/doctor.jpg"
+            alt="Dr. Gabriel Ramírez – Médico Cirujano"
+            loading="lazy"
+          />
+          <div class="about-card-overlay"></div>
+          <div class="about-card-content">
+            <div class="about-card-name">Dr. Gabriel Ramírez</div>
+            <div class="about-card-role">Médico General · Especialista en Salud Integral</div>
+          </div>
+        </div>
+        <div class="about-float-badge">
+          <div class="about-float-badge-num">$25</div>
+          <div class="about-float-badge-label">Primera consulta</div>
+        </div>
+      </div>
+
+      <!-- Text -->
+      <div class="about-text reveal">
+        <div class="section-label">
+          <div class="section-label-line"></div>
+          <span>Quiénes somos</span>
+        </div>
+        <h2 class="section-title">
+          Una medicina <em>cercana</em>,<br />preventiva e integral
+        </h2>
+        <p class="section-subtitle">
+          SAUDEVITAL nació de la convicción de que cada persona merece atención médica de calidad,
+          con calidez humana y criterio clínico sólido. Combinamos lo mejor de la medicina
+          convencional y los tratamientos complementarios.
+        </p>
+
+        <div class="about-pillars">
+          <div class="pillar">
+            <div class="pillar-icon">🎯</div>
+            <div class="pillar-body">
+              <h4>Persona en el centro</h4>
+              <p>Tu bienestar integral guía cada decisión médica. No solo tratamos enfermedades, construimos salud.</p>
+            </div>
+          </div>
+          <div class="pillar">
+            <div class="pillar-icon">🔄</div>
+            <div class="pillar-body">
+              <h4>Renovación continua</h4>
+              <p>Mejora constante de protocolos y tratamientos para ofrecerte siempre lo mejor de la medicina actual.</p>
+            </div>
+          </div>
+          <div class="pillar">
+            <div class="pillar-icon">🤝</div>
+            <div class="pillar-body">
+              <h4>Acompañamiento real</h4>
+              <p>Más que consultas, construimos una relación de confianza para el largo plazo.</p>
+            </div>
+          </div>
+        </div>
+
+        <a href="https://wa.me/593980597474" class="btn-primary" target="_blank" rel="noopener">
+          Hablar con el doctor
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       WHY US
+  ════════════════════════════════════════════ -->
+  <section id="por-que">
+    <div class="why-wrap">
+
+      <!-- Left col -->
+      <div>
+        <div class="section-label reveal">
+          <div class="section-label-line"></div>
+          <span>Nuestra diferencia</span>
+        </div>
+        <h2 class="section-title reveal">¿Por qué elegir<br /><em>SAUDEVITAL</em>?</h2>
+        <p class="section-subtitle reveal">
+          Más de un compromiso: una promesa de calidad médica, calidez humana y resultados reales.
+        </p>
+
+        <!-- Clinic image -->
+        <div class="why-left-image reveal">
+          <img
+            src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=700&auto=format&fit=crop&q=80"
+            alt="Consultorio moderno y equipado"
+            loading="lazy"
+          />
+        </div>
+
+        <div class="why-features reveal">
+          <div class="why-feat">
+            <div class="why-feat-icon">⏰</div>
+            <h4>Horario amplio</h4>
+            <p>Lun–Sáb 8am–8pm y domingos 9am–4pm. Tu salud no espera.</p>
+          </div>
+          <div class="why-feat">
+            <div class="why-feat-icon">💰</div>
+            <h4>Precio accesible</h4>
+            <p>Primera consulta a $25. Calidad sin comprometer tu bolsillo.</p>
+          </div>
+          <div class="why-feat">
+            <div class="why-feat-icon">📍</div>
+            <h4>Ubicación central</h4>
+            <p>Av. Gaspar de Villarroel y París, Torres Parque Real.</p>
+          </div>
+          <div class="why-feat">
+            <div class="why-feat-icon">🔐</div>
+            <h4>Confidencialidad</h4>
+            <p>Total privacidad y discreción en cada consulta.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right col -->
+      <div class="why-right reveal">
+        <div class="why-item">
+          <div class="why-check">✓</div>
+          <div class="why-item-body">
+            <h4>Diagnóstico personalizado</h4>
+            <p>Evaluación individualizada adaptada a tu historial, síntomas y estilo de vida.</p>
+          </div>
+        </div>
+        <div class="why-item">
+          <div class="why-check">✓</div>
+          <div class="why-item-body">
+            <h4>Enfoque integral y preventivo</h4>
+            <p>No solo tratamos la enfermedad: construimos hábitos y prevenimos complicaciones.</p>
+          </div>
+        </div>
+        <div class="why-item">
+          <div class="why-check">✓</div>
+          <div class="why-item-body">
+            <h4>Tecnología y tratamientos actualizados</h4>
+            <p>Ozonoterapia y electrocauterización entre las herramientas modernas disponibles.</p>
+          </div>
+        </div>
+        <div class="why-item">
+          <div class="why-check">✓</div>
+          <div class="why-item-body">
+            <h4>Seguimiento continuo</h4>
+            <p>Control y acompañamiento de patologías crónicas a lo largo del tiempo.</p>
+          </div>
+        </div>
+        <div class="why-item">
+          <div class="why-check">✓</div>
+          <div class="why-item-body">
+            <h4>Trato humano y empático</h4>
+            <p>Atención cálida, sin apresurarse. Cada paciente merece tiempo y atención completa.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       PRICING
+  ════════════════════════════════════════════ -->
+  <section id="consulta">
+    <div style="max-width:900px; margin:0 auto; text-align:center;" class="reveal">
+      <div class="section-label" style="justify-content:center;">
+        <div class="section-label-line"></div>
+        <span>Primera consulta</span>
+        <div class="section-label-line"></div>
+      </div>
+      <h2 class="section-title" style="margin-top:16px;">
+        Tu salud comienza con<br /><em>una decisión</em>
+      </h2>
+    </div>
+
+    <div class="pricing-wrap reveal">
+      <div class="pricing-left">
+        <div class="pricing-badge">Precio especial</div>
+        <div class="pricing-amount"><sup>$</sup>25</div>
+        <div class="pricing-label">Primera consulta médica</div>
+        <p class="pricing-note">
+          Valor único para tu primera visita. Sin costos ocultos, sin sorpresas.
+          Consultas de seguimiento con precios diferenciados según el tratamiento.
+        </p>
+      </div>
+      <div class="pricing-right">
+        <h3>¿Qué incluye tu consulta?</h3>
+        <ul class="pricing-includes">
+          <li>Anamnesis completa y evaluación del historial médico</li>
+          <li>Examen físico integral por el Dr. Gabriel Ramírez</li>
+          <li>Diagnóstico personalizado y orientación terapéutica</li>
+          <li>Plan de tratamiento o derivación especializada si se requiere</li>
+          <li>Educación en hábitos de salud y prevención</li>
+          <li>Indicaciones claras por escrito y seguimiento disponible</li>
+        </ul>
+        <a
+          href="https://wa.me/593980597474?text=Hola%2C%20quiero%20agendar%20mi%20primera%20consulta"
+          class="btn-primary"
+          target="_blank"
+          rel="noopener"
+        >
+          Reservar mi cita · $25
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       CONTACT
+  ════════════════════════════════════════════ -->
+  <section id="contacto">
+    <div class="contact-wrap">
+
+      <!-- Info column -->
+      <div>
+        <div class="section-label reveal">
+          <div class="section-label-line"></div>
+          <span>Dónde encontrarnos</span>
+        </div>
+        <h2 class="section-title reveal">Visítanos en<br /><em>Quito</em></h2>
+
+        <div class="contact-info reveal">
+          <div class="contact-item">
+            <div class="contact-item-icon">📍</div>
+            <div class="contact-item-body">
+              <h4>Dirección</h4>
+              <p>Av. Gaspar de Villarroel y París<br />Torres Parque Real (frente al Ministerio de Deportes)</p>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-item-icon">📞</div>
+            <div class="contact-item-body">
+              <h4>Teléfono / WhatsApp</h4>
+              <p><a href="tel:+593980597474">098 059 7474</a></p>
+            </div>
+          </div>
+
+          <div class="contact-hours">
+            <h4>Horario de atención</h4>
+            <div class="hours-row">
+              <span class="hours-day">Lunes – Sábado</span>
+              <span class="hours-time">8:00 am – 8:00 pm</span>
+            </div>
+            <div class="hours-row">
+              <span class="hours-day">Domingos</span>
+              <span class="hours-time">9:00 am – 4:00 pm</span>
+            </div>
+          </div>
+
+          <div class="contact-cta">
+            <div class="contact-cta-text">
+              <h4>¿Listo para cuidarte?</h4>
+              <p>Escríbenos y agenda tu cita hoy mismo</p>
+            </div>
+            <a
+              href="https://wa.me/593980597474?text=Hola%2C%20quiero%20agendar%20una%20consulta%20en%20SAUDEVITAL"
+              class="btn-whatsapp"
+              target="_blank"
+              rel="noopener"
+            >
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="white">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+              </svg>
+              WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Map column -->
+      <div class="contact-map-side">
+        <div class="map-heading-spacer"></div>
+        <div class="map-container reveal">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.794383!2d-78.4820!3d-0.1905!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91d59a4002427c9f%3A0x44b991e158ef5572!2sAv.%20Gaspar%20de%20Villarroel%20%26%20Paris%2C%20Quito!5e0!3m2!1ses!2sec!4v1650000000000!5m2!1ses!2sec"
+            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+            title="Ubicación SAUDEVITAL – Av. Gaspar de Villarroel y París, Quito"
+          ></iframe>
+          <div class="map-overlay"></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       FOOTER
+  ════════════════════════════════════════════ -->
+  <footer>
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="#" class="footer-logo">
+          <img src="assets/img/logo.jpg" alt="SAUDEVITAL logo" />
+          <div class="footer-logo-text">
+            <span class="logo-name">SAUDEVITAL</span>
+            <span class="logo-sub">Salud y Bienestar</span>
+          </div>
+        </a>
+        <p>
+          Tu bienestar comienza con una decisión: la de cuidarte. Medicina cercana,
+          preventiva e integral, donde cada persona es el centro del proceso de cuidado.
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h5>Servicios</h5>
+        <ul>
+          <li><a href="#servicios">Medicina General</a></li>
+          <li><a href="#servicios">Ozonoterapia</a></li>
+          <li><a href="#servicios">Bienestar Masculino</a></li>
+          <li><a href="#servicios">VPH – Diagnóstico y Tratamiento</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5>Contacto</h5>
+        <ul>
+          <li>Av. Gaspar de Villarroel y París</li>
+          <li>Torres Parque Real, Quito</li>
+          <li><a href="tel:+593980597474">098 059 7474</a></li>
+          <li>Lun–Sáb 8am–8pm</li>
+          <li>Domingos 9am–4pm</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2026 <span>SAUDEVITAL</span> · Salud y Bienestar · Dr. Gabriel Ramírez</p>
+      <p>Tu bienestar comienza con <span>una decisión</span>… ¡la de cuidarte!</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+</html>
