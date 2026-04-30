@@ -160,6 +160,18 @@ section { padding: 100px 5%; }
 .section-light .section-subtitle { color: var(--text-mid); }
 .section-dark  .section-subtitle { color: var(--text-light); }
 
+/* Services header subtitle – editorial serif treatment */
+.services-header .section-subtitle {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 1.2rem;
+  font-weight: 400;
+  line-height: 1.8;
+  color: var(--text-mid);
+  border-left: 2px solid var(--gold);
+  padding-left: 16px;
+}
+
 /* =============================================
    NAVIGATION
    ============================================= */
@@ -878,6 +890,147 @@ footer {
 }
 
 /* =============================================
+   SOCIAL LINKS – HERO SIDEBAR
+   ============================================= */
+.hero-social {
+  position: absolute;
+  left: 28px;
+  bottom: 130px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  z-index: 5;
+}
+.hero-social-line {
+  width: 1px;
+  height: 56px;
+  background: linear-gradient(to bottom, rgba(201,168,76,0.45), transparent);
+  margin-top: 4px;
+}
+.hero-social-link {
+  width: 36px;
+  height: 36px;
+  border: 1px solid rgba(201,168,76,0.3);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gold);
+  text-decoration: none;
+  transition: background 0.2s, border-color 0.2s, transform 0.2s;
+  backdrop-filter: blur(4px);
+}
+.hero-social-link:hover {
+  background: rgba(201,168,76,0.18);
+  border-color: var(--gold);
+  transform: scale(1.12);
+}
+.hero-social-link svg {
+  width: 15px;
+  height: 15px;
+  fill: currentColor;
+  flex-shrink: 0;
+}
+
+/* inline row (visible only on mobile; hidden on desktop) */
+.hero-social-inline {
+  display: none;
+  align-items: center;
+  gap: 12px;
+  margin-top: 28px;
+}
+.hero-social-inline-label {
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(201,168,76,0.6);
+  font-weight: 400;
+  margin-right: 4px;
+}
+
+/* =============================================
+   SOCIAL LINKS – CONTACT SECTION
+   ============================================= */
+.contact-social {
+  margin-top: 28px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.contact-social-label {
+  font-size: 0.72rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--text-mid);
+  font-weight: 500;
+  white-space: nowrap;
+}
+.contact-social-links {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.contact-social-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px 8px 10px;
+  border: 1px solid var(--border-light);
+  border-radius: var(--r-pill);
+  text-decoration: none;
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: var(--text-mid);
+  transition: all 0.22s;
+  background: var(--white);
+}
+.contact-social-link svg {
+  width: 15px;
+  height: 15px;
+  fill: currentColor;
+  flex-shrink: 0;
+}
+.contact-social-link:hover { transform: translateY(-2px); box-shadow: 0 4px 16px rgba(0,0,0,0.1); }
+.contact-social-link.instagram:hover { border-color: #E1306C; color: #E1306C; }
+.contact-social-link.tiktok:hover { border-color: #010101; color: #010101; }
+.contact-social-link.facebook:hover { border-color: #1877F2; color: #1877F2; }
+
+/* =============================================
+   SOCIAL LINKS – FOOTER
+   ============================================= */
+.footer-social {
+  display: flex;
+  gap: 10px;
+  margin-top: 22px;
+}
+.footer-social-link {
+  width: 38px;
+  height: 38px;
+  border: 1px solid rgba(201,168,76,0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-light);
+  text-decoration: none;
+  transition: border-color 0.22s, color 0.22s, background 0.22s, transform 0.2s;
+}
+.footer-social-link:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+  background: rgba(201,168,76,0.08);
+  transform: translateY(-2px);
+}
+.footer-social-link svg {
+  width: 15px;
+  height: 15px;
+  fill: currentColor;
+  flex-shrink: 0;
+}
+
+/* =============================================
    RESPONSIVE
    ============================================= */
 
@@ -944,6 +1097,8 @@ footer {
   /* Hero: account for fixed nav */
   .hero-content { padding-top: 90px; padding-bottom: 60px; }
   .hero-h1 { font-size: clamp(2.6rem, 10vw, 4rem); }
+  .hero-social { display: none; }
+  .hero-social-inline { display: flex; }
 
   /* Services header */
   .services-header { flex-direction: column; align-items: flex-start; gap: 16px; }
@@ -1012,6 +1167,9 @@ footer {
   /* Contact */
   .contact-item { gap: 12px; padding: 16px 18px; }
   .contact-item-icon { width: 38px; height: 38px; font-size: 0.95rem; }
+  .contact-social { flex-direction: column; align-items: flex-start; gap: 12px; }
+  .contact-social-link span { display: none; }
+  .contact-social-link { padding: 8px 10px; }
 
   /* Footer */
   .footer-brand p { max-width: 100%; }
