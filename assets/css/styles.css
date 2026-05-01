@@ -1122,10 +1122,22 @@ footer {
   #hero { padding: 0 6%; }
 
   /* Hero: account for fixed nav */
-  .hero-content { padding-top: 90px; padding-bottom: 60px; }
+  .hero-content { padding-top: 90px; padding-bottom: 36px; }
   .hero-h1 { font-size: clamp(2.6rem, 10vw, 4rem); }
   .hero-social { display: none; }
   .hero-social-inline { display: flex; }
+  /* Hide scroll indicator on mobile — not needed on touch */
+  .hero-scroll { display: none; }
+  /* Shrink & dim teal orbs so they don't flood the narrow screen */
+  .orb-1 { width: 260px; height: 260px; opacity: 0.45; top: -60px; right: -40px; }
+  .orb-3 { opacity: 0.3; }
+  /* Shift teal radial gradient off-screen on mobile */
+  .hero-bg {
+    background:
+      radial-gradient(ellipse 60% 50% at 110% 20%, rgba(42,191,191,0.06) 0%, transparent 60%),
+      radial-gradient(ellipse 50% 60% at 20% 70%, rgba(201,168,76,0.06) 0%, transparent 55%),
+      linear-gradient(160deg, #04111E 0%, #07192B 50%, #04111E 100%);
+  }
 
   /* Services header */
   .services-header { flex-direction: column; align-items: flex-start; gap: 16px; }
