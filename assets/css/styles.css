@@ -243,17 +243,24 @@ nav.scrolled .nav-links a:hover { color: var(--gold); }
 
 /* Mobile menu */
 .mobile-menu {
-  display: none; position: fixed; inset: 0; z-index: 201;
+  display: flex; position: fixed; inset: 0; z-index: 201;
   background: rgba(4,17,30,0.97); backdrop-filter: blur(24px);
   flex-direction: column; align-items: center; justify-content: center; gap: 0;
-  opacity: 0; transition: opacity 0.3s ease;
+  /* Hidden state — visibility allows CSS transition, display:none does not */
+  visibility: hidden; opacity: 0; pointer-events: none;
+  transform: translateY(-10px);
+  transition: opacity 0.38s ease, transform 0.38s ease, visibility 0s linear 0.38s;
 }
-.mobile-menu.open { display: flex; opacity: 1; }
+.mobile-menu.open {
+  visibility: visible; opacity: 1; pointer-events: all;
+  transform: translateY(0);
+  transition: opacity 0.38s ease, transform 0.38s ease, visibility 0s linear 0s;
+}
 
-/* Brand header inside mobile menu */
+/* Brand header */
 .mobile-menu-brand {
   position: absolute; top: 0; left: 0; right: 0;
-  padding: 22px 6%;
+  padding: 20px 6%;
   display: flex; align-items: center; justify-content: space-between;
   border-bottom: 1px solid rgba(201,168,76,0.12);
 }
@@ -265,43 +272,28 @@ nav.scrolled .nav-links a:hover { color: var(--gold); }
 /* Nav links */
 .mobile-menu a {
   font-family: 'Cormorant Garamond', serif;
-  font-size: 2.2rem; font-weight: 400; color: rgba(255,255,255,0.75);
-  text-decoration: none; transition: color 0.2s, transform 0.2s;
-  padding: 10px 0; letter-spacing: 0.02em;
+  font-size: 2.2rem; font-weight: 400; color: rgba(255,255,255,0.72);
+  text-decoration: none; padding: 10px 0; letter-spacing: 0.02em;
+  transition: color 0.22s, transform 0.22s;
 }
-.mobile-menu a:hover { color: var(--gold); transform: translateX(6px); }
+.mobile-menu a:hover { color: var(--gold); transform: translateX(8px); }
 
-/* Decorative line between links */
+/* Decorative dividers between links */
 .mobile-menu-divider {
-  width: 32px; height: 1px; background: rgba(201,168,76,0.2); margin: 2px 0;
+  width: 28px; height: 1px; background: rgba(201,168,76,0.2); margin: 2px 0;
 }
-
-/* Footer inside mobile menu */
-.mobile-menu-footer {
-  position: absolute; bottom: 0; left: 0; right: 0;
-  padding: 20px 6%;
-  display: flex; align-items: center; justify-content: center; gap: 16px;
-  border-top: 1px solid rgba(201,168,76,0.12);
-}
-.mobile-menu-footer a {
-  font-family: 'DM Sans', sans-serif !important;
-  font-size: 0.7rem !important; letter-spacing: 0.2em;
-  text-transform: uppercase; color: var(--text-light) !important;
-  padding: 0 !important; transform: none !important;
-  transition: color 0.2s !important;
-}
-.mobile-menu-footer a:hover { color: var(--gold) !important; transform: none !important; }
 
 /* Close button */
 .mobile-close {
   display: flex; align-items: center; justify-content: center;
-  width: 38px; height: 38px; border-radius: 50%;
-  background: rgba(201,168,76,0.08); border: 1px solid rgba(201,168,76,0.25);
+  width: 40px; height: 40px; border-radius: 50%;
+  background: rgba(201,168,76,0.07); border: 1px solid rgba(201,168,76,0.28);
   color: var(--gold); cursor: pointer;
-  transition: background 0.2s, border-color 0.2s;
+  transition: background 0.22s, border-color 0.22s;
 }
-.mobile-close:hover { background: rgba(201,168,76,0.18); border-color: var(--gold); }
-.mobile-close svg { width: 16px; height: 16px; }
+.mobile-close:hover { background: rgba(201,168,76,0.16); border-color: var(--gold); }
+.mobile-close svg { width: 16px; height: 16px; transition: transform 0.3s ease; }
+.mobile-close:hover svg { transform: rotate(90deg); }
 
 /* =============================================
    HERO  (dark)
@@ -524,7 +516,7 @@ nav.scrolled .nav-links a:hover { color: var(--gold); }
 }
 .strip-track {
   display: flex; white-space: nowrap;
-  animation: marquee 14s linear infinite; padding: 16px 0;
+  animation: marquee 9s linear infinite; padding: 16px 0;
 }
 .strip-item {
   display: inline-flex; align-items: center; gap: 12px;
